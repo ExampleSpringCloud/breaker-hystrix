@@ -10,15 +10,14 @@ import org.springframework.stereotype.Service;
 public class BookService {
 
     @Autowired
-    private BookServiceClient bookServiceClient;
+    BookServiceClient bookServiceClient;
 
     @HystrixCommand(fallbackMethod = "reliable")
-    public String getBookServiceInstanceServiceInfo() {
-        return bookServiceClient.getInstanceServiceInfo();
+    public String getBookServiceLocalServiceInstance() {
+        return bookServiceClient.getLocalServiceInstance();
     }
 
     public String reliable() {
-        return "this is the fallback command";
+        return "book-service application is down";
     }
-
 }

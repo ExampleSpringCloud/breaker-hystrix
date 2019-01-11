@@ -24,9 +24,9 @@ public class BreakerHystrixApplication {
 		SpringApplication.run(BreakerHystrixApplication.class, args);
 	}
 
-	@GetMapping("/")
 	@HystrixCommand
+	@GetMapping("/book-service-instance")
 	public String home() {
-		return bookservice.getBookServiceInstanceServiceInfo();
+		return bookservice.getBookServiceLocalServiceInstance();
 	}
 }
