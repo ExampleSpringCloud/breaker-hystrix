@@ -4,6 +4,6 @@
 
 ### Test Application
 - run <code>book-service</code> application
-- go to <code>http://localhost:8087/book-service-instance</code>
+- go to http://localhost:8087/book-service-instance
 - stop <code>book-service</code> application
-- go to <code>http://localhost:8087/book-service-instance</code>
+- go to http://localhost:8087/book-service-instance
